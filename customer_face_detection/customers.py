@@ -18,8 +18,8 @@ class CustomersDict:
                 yield file
 
     def create_image_dict(self):
-        X = get_file_names(self.pic_folder)
-        list_of_pics = [x for x in X]
+        pics = get_file_names(self.pic_folder)
+        list_of_pics = [x for x in pics]
         list_of_names = [j.replace(".jpeg", "") for j in list_of_pics]
         new_path = self.pic_folder + r'/{}'
         picture_objects = [fr.face_encodings(fr.load_image_file(new_path.format(x)))[0] for x in list_of_pics]
