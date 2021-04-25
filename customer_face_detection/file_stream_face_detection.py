@@ -68,10 +68,10 @@ if __name__ == "__main__":
             left *= 4
 
             # Draw a box around the face
-            cv2.rectangle(frame, (left, top), (right, bottom), (150, 0, 0), 2)
+            cv2.rectangle(frame, (left, top), (right, bottom), (180, 0, 0), 2)
 
             # Draw a label with a name below the face
-            cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (150, 25, 0), cv2.FILLED)
+            cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (180, 25, 0), cv2.FILLED)
             font = cv2.FONT_HERSHEY_SIMPLEX
             cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.5, (255, 255, 255), 1)
 
